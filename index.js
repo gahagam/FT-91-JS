@@ -1,30 +1,69 @@
-alert(
-    'Совершенным называется число, равное сумме всех своих собственных делителей (отличных от x). Например: 6 = 1 + 2 + 3; 28 = 1 + 2 + 4 + 7 + 14.'
-);
-
-function Check(x) {
-    if (Number.isNaN(number)) {
-        alert('Введите число!')
-    }
-    else if (typeof x !== 'number' || !Number.isInteger(x) || x <= 1) {
-        return false; // Совершенные числа должны быть целыми положительными и больше 1
-    }
-    let sum = 0;
-    for (let i = 1; i <= Math.floor(x / 2); i++) {
-        if (x % i === 0) {
-            sum += i;
-        }
-    }
-
-    return sum === x;
+function explainTask1() {
+    alert(
+        'Напишите функцию, которая принимает три числовых параметра и возвращает произведение двух максимальных из них.'
+    );
 }
 
-let number = Number(prompt("Введите целое число:"));
-
-if (Check(number)) {
-    console.log(number + " является совершенным числом.");
-    alert(number + " является совершенным числом.");
-} else {
-    console.log(number + " не является совершенным числом.");
-    alert(number + " не является совершенным числом.");
+function explainTask2() {
+    alert(
+        'Объявите функцию, которая принимает на вход целые числа. Для чётных значений функция возвращает стрелочное выражение возведения числа в квадрат, а для нечётных – стрелочное выражение возведения в куб.'
+    );
 }
+
+function explainTask3() {
+    alert(
+        'Напишите рекурсивную функцию для расчёта факториала числа n.'
+    );
+}
+
+function Multi(num1, num2, num3) {
+    const max1 = Math.max(num1, num2, num3);
+    let max2;
+    if (max1 === num1) {
+        max2 = Math.max(num2, num3)
+    } else if (max1 === num2) {
+        max2 = Math.max(num1, num3)
+    } else {
+        max2 = Math.max(num1, num2)
+    }
+    return max1 * max2;
+}
+
+function Check(number) {
+    if (number % 2 === 0) {
+        return (x) => x * x;
+    } else {
+        return (x) = x * x * x;
+    }
+}
+
+function factorial(n) {
+    if (n === 0) {
+        return 1;
+    }
+    else {
+        return n * factorial(n - 1);
+    }
+}
+
+function inputNumber() {
+    return parseFloat(prompt('Введите число'));
+}
+
+
+explainTask1()
+const n1 = inputNumber();
+const n2 = inputNumber();
+const n3 = inputNumber();
+alert(`Произведение двух максимальных чисел: ${Multi(n1, n2, n3)}`);
+console.log(`Произведение двух максимальных чисел: ${Multi(n1, n2, n3)}`);
+
+explainTask2()
+const n = inputNumber();
+alert(`Ваш результат: ${Check(n)}`);
+console.log(`Ваш результат: ${Check(n)}`);
+
+explainTask3()
+const number = inputNumber();
+alert(`Факториал числа: ${factorial(number)}`);
+console.log(`Факториал числа: ${factorial(number)}`);
