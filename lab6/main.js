@@ -39,7 +39,7 @@ class Student {
     }
 }
 
-function countLargestGroup(students) {
+function countGroup(students) {
     const counts = new Map();
 
     for (const student of students) {
@@ -62,10 +62,13 @@ function countLargestGroup(students) {
 }
 
 const students = [
-    new Student("Иван", "3"),
-    new Student("Арина", "4"),
-    new Student("Мария", "2"),
-    new Student("Олег", "5"),
-    new Student("Артем", "5"),
-    new Student("Федор", "4"),
+    new Student("Иван", "101"),
+    new Student("Арина", "103"),
+    new Student("Мария", "101"),
+    new Student("Олег", "102"),
+    new Student("Артем", "103"),
+    new Student("Федор", "101"),
 ];
+
+console.log(students);
+console.log("Число обучающихся в самой большой группе: ", countGroup(students)); 
