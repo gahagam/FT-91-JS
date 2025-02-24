@@ -47,9 +47,7 @@ class Rectangle extends Figure {
 const x1 = new Circle(0, 0, 4);
 let a = x1.square();
 console.log(`Круг с радиусом 4: ${a}`);
-console.log(" "); 
 
 const x2 = new Rectangle(0, 0, 4, 10);
 a = x2.square();
 console.log(`Прямоугольник со сторонами 4 и 10: ${a}`);
-console.log(" "); 
