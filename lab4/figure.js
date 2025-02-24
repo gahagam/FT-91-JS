@@ -1,5 +1,4 @@
-
-class Figure {
+﻿class Figure {
     #x;
     #y;
 
@@ -10,7 +9,7 @@ class Figure {
 
     square() {
         console.log("Площадь фигуры: ");
-        return undefined;
+        return undefined; 
     }
 }
 
@@ -35,7 +34,7 @@ class Rectangle extends Figure {
     constructor(x, y, h, w) {
         super(x, y);
         this.#h = h;
-        this.#w = w;
+        this.#w = w; 
     }
 
     square() {
@@ -45,10 +44,12 @@ class Rectangle extends Figure {
 }
 
 
-const circle = new Circle(0, 0, 4);
-console.log(`Круг: Центр (${circle.x}, ${circle.y}), Радиус ${circle.r}`);
-console.log(`Площадь круга: ${circle.square().toFixed(2)}`);
+const x1 = new Circle(0, 0, 4);
+let a = x1.square();
+console.log(`Круг с радиусом 4: ${a}`);
+console.log(" "); 
 
-const rectangle = new Rectangle(1, 2, 3, 4);
-console.log(`Прямоугольник: Центр (${rectangle.x}, ${rectangle.y}), Высота ${rectangle.h}, Ширина ${rectangle.w}`);
-console.log(`Площадь прямоугольника: ${rectangle.square()}`);
+const x2 = new Rectangle(0, 0, 4, 10);
+a = x2.square();
+console.log(`Прямоугольник со сторонами 4 и 10: ${a}`);
+console.log(" "); 
